@@ -1,0 +1,43 @@
+body{margin:0;background:#000;color:#fff;font-family:Arial;text-align:center}
+
+.intro{
+position:fixed;inset:0;background:black;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;z-index:999
+}
+
+.hud{display:flex;justify-content:center;gap:15px;padding:10px;background:#111}
+
+.arena{
+position:relative;height:300px;margin:10px;
+background:linear-gradient(#006400,#012169);
+border:2px solid white;overflow:hidden
+}
+
+.crowd{position:absolute;top:5px;width:100%;color:gold}
+
+.fighter{
+position:absolute;bottom:0;width:70px;height:130px
+}
+.player{left:40px;background:cyan}
+.enemy{left:300px;background:red}
+
+.controls button{padding:8px 12px;margin:5px}
+
+.godText{
+position:absolute;top:40%;width:100%;
+font-size:28px;font-weight:bold;
+color:white;text-shadow:0 0 20px red;
+}
+
+@keyframes punch{50%{transform:translateX(20px)}}
+@keyframes shake{
+25%{transform:translate(-3px,3px)}
+50%{transform:translate(3px,-3px)}
+75%{transform:translate(-3px,-3px)}
+}
+
+.punch{animation:punch .2s}
+.shake{animation:shake .3s}
+.domain{background:linear-gradient(#000,#200000)}
+.slow{animation:shake .6s}
