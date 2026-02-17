@@ -1,43 +1,89 @@
-body{margin:0;background:#000;color:#fff;font-family:Arial;text-align:center}
-
-.intro{
-position:fixed;inset:0;background:black;
-display:flex;flex-direction:column;
-justify-content:center;align-items:center;z-index:999
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:sans-serif;
 }
 
-.hud{display:flex;justify-content:center;gap:15px;padding:10px;background:#111}
+body{
+  background:#0a0a0a;
+  color:white;
+  overflow:hidden;
+}
+
+#game{
+  width:100vw;
+  height:100vh;
+  position:relative;
+}
+
+.hud{
+  position:absolute;
+  top:20px;
+  left:20px;
+  right:20px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.bar{
+  width:250px;
+  height:15px;
+  background:#222;
+  margin-bottom:8px;
+}
+
+.hp{
+  height:100%;
+  background:red;
+  width:100%;
+}
+
+.ce{
+  height:100%;
+  background:purple;
+  width:0%;
+}
 
 .arena{
-position:relative;height:300px;margin:10px;
-background:linear-gradient(#006400,#012169);
-border:2px solid white;overflow:hidden
+  position:absolute;
+  top:150px;
+  bottom:150px;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
 }
-
-.crowd{position:absolute;top:5px;width:100%;color:gold}
 
 .fighter{
-position:absolute;bottom:0;width:70px;height:130px
-}
-.player{left:40px;background:cyan}
-.enemy{left:300px;background:red}
-
-.controls button{padding:8px 12px;margin:5px}
-
-.godText{
-position:absolute;top:40%;width:100%;
-font-size:28px;font-weight:bold;
-color:white;text-shadow:0 0 20px red;
+  width:120px;
+  height:220px;
+  border-radius:10px;
+  transition:0.1s;
 }
 
-@keyframes punch{50%{transform:translateX(20px)}}
-@keyframes shake{
-25%{transform:translate(-3px,3px)}
-50%{transform:translate(3px,-3px)}
-75%{transform:translate(-3px,-3px)}
+.red{ background:crimson; }
+.blue{ background:royalblue; }
+
+.controls{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding:20px;
 }
 
-.punch{animation:punch .2s}
-.shake{animation:shake .3s}
-.domain{background:linear-gradient(#000,#200000)}
-.slow{animation:shake .6s}
+button{
+  padding:12px 20px;
+  background:#111;
+  border:1px solid #444;
+  color:white;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#222;
+}
