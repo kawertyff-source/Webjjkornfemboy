@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JJK Boxing Esport v2</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div id="intro" class="intro">
+  <h1>JJK BOXING WORLD FINAL</h1>
+  <p>RIO DE JANEIRO</p>
+  <button onclick="startGame()">ENTER ARENA</button>
+</div>
+
+<header class="hud">
+  <div>HP <b id="hp">100</b></div>
+  <div>Enemy <b id="enemyHp">100</b></div>
+  <div>Energy <b id="energy">100</b></div>
+  <div>Combo <b id="combo">0</b></div>
+  <div>ELO <b id="elo">1000</b></div>
+</header>
+
+<main class="arena" id="arena">
+  <div id="crowd" class="crowd">🔥 WORLD FINAL 🔥</div>
+  <div class="fighter player" id="player"></div>
+  <div class="fighter enemy" id="enemy"></div>
+  <div id="godText" class="godText"></div>
+</main>
+
+<section class="controls">
+  <button data-act="left">⬅</button>
+  <button data-act="right">➡</button>
+  <button data-act="attack">Punch</button>
+  <button data-act="skill">Skill</button>
+  <button data-act="dodge">Dodge</button>
+  <button data-act="ult">GOD</button>
+</section>
+
+<audio id="sPunch" src="https://assets.mixkit.co/active_storage/sfx/2073/2073-preview.mp3"></audio>
+<audio id="sCrit" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+<audio id="sUlt" src="https://assets.mixkit.co/active_storage/sfx/2764/2764-preview.mp3"></audio>
+<audio id="sCrowd" src="https://assets.mixkit.co/active_storage/sfx/171/171-preview.mp3" loop></audio>
+
+<script src="js/main.js"></script>
+</body>
+</html>
